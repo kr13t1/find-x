@@ -106,6 +106,21 @@
     z-index: 1000;
   }
 
+  /* Кнопка "Назад" */
+  #back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #009078;
+    background-color: #f0f0f0;
+    border: 1px solid #009078;
+    border-radius: 5px;
+    padding: 5px 10px;
+    z-index: 1000;
+  }
+
   /* Адаптация для телефонов */
   @media (max-width: 600px) {
     h1 {
@@ -123,6 +138,11 @@
     #restart-button {
       font-size: 1em;
       padding: 8px 16px;
+    }
+
+    #back-button {
+      font-size: 14px;
+      padding: 4px 8px;
     }
   }
 </style>
@@ -146,12 +166,16 @@
 <!-- Логотип -->
 <img id="logo" src="logo.png" alt="Логотип">
 
+<!-- Кнопка "Назад" -->
+<button id="back-button">Назад</button>
+
 <script>
   const gameArea = document.getElementById('game-area');
   const targetNumberDisplay = document.getElementById('target-number');
   const timeDisplay = document.getElementById('time');
   const scoreDisplay = document.getElementById('score');
   const restartButton = document.getElementById('restart-button'); // Получаем кнопку
+  const backButton = document.getElementById('back-button'); // Получаем кнопку "Назад"
 
   let numbers = [];
   let targetNumber;
@@ -291,10 +315,15 @@
     timeDisplay.textContent = time;
   }
 
-  // Добавляем обработчик события для кнопки
+  // Добавляем обработчик события для кнопки "Начать заново"
   restartButton.addEventListener('click', () => {
     endGame(); // Останавливаем текущую игру
     startGame(); // Начинаем игру заново
+  });
+
+  // Добавляем обработчик события для кнопки "Назад"
+  backButton.addEventListener('click', () => {
+    window.history.back(); // Возврат на предыдущую страницу
   });
 
   startGame(); // Запускаем игру при загрузке страницы
