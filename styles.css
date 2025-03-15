@@ -58,7 +58,7 @@ p {
 
 /* Кнопка "Начать заново" */
 #restart-button {
-    background-color: #2EA692; /* Основной бирюзовый цвет */
+    background-color: #009078; /* Основной бирюзовый цвет */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -93,8 +93,8 @@ p {
 #logo {
     position: fixed;
     bottom: 20px; /* Отступ снизу */
-    left: 15px; /* Отступ слева */
-    width: 120px; /* Увеличиваем ширину */
+    left: 20px; /* Отступ слева */
+    width: 100px; /* Увеличиваем ширину */
     height: auto;
     z-index: 1000;
 }
