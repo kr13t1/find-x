@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра "Найди число"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Игра "Найди число"</h1>
+
+    <!-- Значок настроек -->
+ <div id="settings-icon" class="visible">❔</div>
+    <!-- Подсказка -->
+    <div id="settings-tooltip">Найдите больше 12 чисел за минуту, чтобы получить приз!</div>
+
+    <p>Найдите число: <span id="target-number"></span></p>
+
+    <div id="game-area"></div>
+
+    <p>Время: <span id="time">0</span> секунд</p>
+    <p>Счет: <span id="score">0</span></p>
+
+    <!-- Кнопка "Начать заново" -->
+    <button id="restart-button">Начать заново</button>
+
+    <!-- Логотип -->
+    <img id="logo" src="logo.png" alt="Логотип">
+
+    <!-- Кнопка "Назад" -->
+    <button id="back-button">Назад</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
