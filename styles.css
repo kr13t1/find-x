@@ -33,7 +33,7 @@ h1 {
 
 .number {
     position: absolute;
-    color: #87CEEB; /* Нежно-голубой цвет для чисел */
+    color: #6CA5BC; /* Нежно-голубой цвет для чисел */
     font-size: 1.2em;
     padding: 5px 10px; /* Уменьшаем padding */
     cursor: pointer;
