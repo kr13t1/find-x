@@ -89,37 +89,6 @@ p {
     }
 }
 
- /* Логотип */
-#logo {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 150px; /* Увеличенный размер */
-    height: auto;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-
-
-/* Кнопка "Назад" */
-#back-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 20px; /* Увеличенный размер */
-    cursor: pointer;
-    color: #009078; /* Зеленый цвет */
-    background-color: #f0f0f0; /* Серый фон */
-    border: 1px solid #009078; /* Зеленая рамка */
-    border-radius: 5px;
-    padding: 10px 20px; /* Увеличенный размер */
-    z-index: 1000;
-}
-
-
-
-
 /* значкок настроек(?) */
 #settings-icon {
     position: fixed;
@@ -153,6 +122,33 @@ p {
     font-family: 'Nunito', sans-serif; /* Основной шрифт */
 }
 
+/* Логотип и кнопка "Назад" */
+        #logo {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 100px; /* Увеличиваем размер логотипа */
+            height: auto;
+            z-index: 1000;
+        }
+
+        #back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.2em; /* Увеличиваем размер кнопки */
+            cursor: pointer;
+            color: #009078;
+            background-color: #f0f0f0;
+            border: 1px solid #009078;
+            border-radius: 5px;
+            padding: 10px 20px; /* Увеличиваем отступы */
+            z-index: 1000;
+        }
+
+
+
+           
 /* Адаптация для телефонов */
 @media (max-width: 600px) {
     h1 {
@@ -162,6 +158,10 @@ p {
     #game-area {
         height: 50vh;
     }
+
+      #logo {
+                width: 80px; /* Уменьшаем размер логотипа на маленьких экранах */
+            }
 
     .number {
         font-size: 1em;
