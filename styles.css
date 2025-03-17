@@ -89,34 +89,32 @@ p {
     }
 }
 
-/* значкок настроек(?) */
-#settings-icon {
+/* Иконка помощи */
+#help-icon {
     position: fixed;
-    top: 10px; /* Отступ сверху */
-    right: 10px; /* Отступ справа */
-    font-size: 1.5em; /* Размер значка */
-    color: #009078; /* Цвет значка */
-    cursor: pointer; /* Курсор при наведении */
-    display: none; /* Скрываем по умолчанию */
-    z-index: 3; /* Уровень слоя */
-}
-
-/* Показываем значок настроек(?) при необходимости */
-#settings-icon.visible {
-    display: block;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #009078; /* Зеленый цвет */
+    background-color: #f0f0f0; /* Серый фон */
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    z-index: 1000;
 }
 
 /* Стили для подсказки */
-#settings-tooltip {
+#help-text {
     position: fixed;
-    top: 50px; /* Отступ сверху */
-    right: 10px; /* Отступ справа */
+    top: 70px;
+    right: 20px;
     background-color: #2EA692; /* Цвет фона */
     color: white; /* Цвет текста */
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
-    display: none; /* Скрываем по умолчанию */
+    display: none; /* Скрыт по умолчанию */
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для выделения */
     font-family: 'Nunito', sans-serif; /* Основной шрифт */
@@ -147,8 +145,7 @@ p {
         }
 
 
-
-           
+            
 /* Адаптация для телефонов */
 @media (max-width: 600px) {
     h1 {
@@ -159,7 +156,7 @@ p {
         height: 50vh;
     }
 
-      #logo {
+     #logo {
                 width: 80px; /* Уменьшаем размер логотипа на маленьких экранах */
             }
 
