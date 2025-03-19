@@ -1,12 +1,15 @@
 // Получаем элементы DOM
-const gameArea = document.getElementById('game-area');
+const startScreen = document.getElementById('start-screen');
+const startGameButton = document.getElementById('start-game-button');
+const gameContainer = document.getElementById('game-container');
 const targetNumberDisplay = document.getElementById('target-number');
+const gameArea = document.getElementById('game-area');
 const timeDisplay = document.getElementById('time');
 const scoreDisplay = document.getElementById('score');
 const restartButton = document.getElementById('restart-button');
-const backButton = document.getElementById('back-button');
 const settingsIcon = document.getElementById('settings-icon');
 const settingsTooltip = document.getElementById('settings-tooltip');
+const backButton = document.getElementById('back-button');
 
 // Игровые переменные
 let numbers = [];
@@ -151,7 +154,20 @@ function endGame() {
     targetNumberDisplay.textContent = "Игра окончена! Ваш счет: " + score;
     gameArea.innerHTML = '';
     timeDisplay.textContent = time;
+
+    // Показываем начальный экран через 3 секунды
+    setTimeout(() => {
+        startScreen.style.display = 'block';
+        gameContainer.style.display = 'none';
+    }, 3000);
 }
+
+// Обработчик для кнопки "Начать игру"
+startGameButton.addEventListener('click', () => {
+    startScreen.style.display = 'none'; // Скрываем начальный экран
+    gameContainer.style.display = 'block'; // Показываем игровое поле
+    startGame(); // Запускаем игру
+});
 
 // Обработчик для кнопки "Начать заново"
 restartButton.addEventListener('click', () => {
@@ -179,11 +195,3 @@ document.addEventListener('click', (event) => {
         settingsTooltip.style.display = 'none';
     }
 });
-
-// Показываем значок настроек при загрузке страницы
-window.addEventListener('load', () => {
-    settingsIcon.classList.add('visible');
-});
-
-// Запуск игры при загрузке страницы
-startGame();
