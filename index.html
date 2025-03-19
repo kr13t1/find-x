@@ -3,35 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игра "Найди число"</title>
+    <title>Найди число</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Игра "Найди число"</h1>
+    <!-- Начальный экран с правилами и кнопкой "Начать игру" -->
+    <div id="start-screen">
+        <h1>Найди число</h1>
+        <div id="rules">
+            <h2>Как играть</h2>
+<p>Добро пожаловать в игру "Найди число"! Это увлекательное испытание на внимательность и скорость.</p>
+         <ol>
+                <li>На экране расположены числа от 1 до 100.</li>
+                <li>Игра покажет целевое число, которое нужно найти.</li>
+                <li>Кликайте на целевое число, чтобы заработать очки.</li>
+                <li>У вас есть 60 секунд, чтобы найти как можно больше чисел.</li>
+                <li><strong>Цель:</strong>найти больше 15 чисел, чтобы получить приз!</li>
+            </ol>
+        </div>
+        <button id="start-game-button">Начать игру</button>
+    </div>
 
-    <!-- Значок настроек -->
- <div id="settings-icon" class="visible">ⓘ</div>
-    <!-- Подсказка -->
-    <div id="settings-tooltip">Найдите больше 12 чисел за минуту, чтобы получить приз!</div>
+    <!-- Игровое поле и другие элементы (изначально скрыты) -->
+    <div id="game-container" style="display: none;">
+        <h1>Найди число</h1>
+        <div id="settings-icon" class="visible">ⓘ</div>
+        <div id="settings-tooltip">Найдите больше 15 чисел за минуту, чтобы получить приз!</div>
 
-    <p>Найдите число: <span id="target-number"></span></p>
+        <p>Найдите число: <span id="target-number"></span></p>
 
-    <div id="game-area"></div>
+        <div id="game-area"></div>
 
-    <p>Время: <span id="time">0</span> секунд</p>
-    <p>Счет: <span id="score">0</span></p>
+        <p>Время: <span id="time">0</span> секунд</p>
+        <p>Счет: <span id="score">0</span></p>
 
-    <!-- Кнопка "Начать заново" -->
-    <button id="restart-button">Начать заново</button>
+        <button id="restart-button">Начать заново</button>
 
-    <!-- Логотип -->
-    <img id="logo" src="logo.png" alt="Логотип">
+	<!-- Логотипы -->
+	<div id="logos">
+    		<img id="logo" src="logo.png" alt="Логотип">
+   		 <img id="croc-logo" src="croc-logo.png" alt="Логотип Croc">
+	</div>
+        <button id="back-button">Назад</button>
 
-    <!-- Кнопка "Назад" -->
-    <button id="back-button">Назад</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
