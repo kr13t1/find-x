@@ -17,7 +17,7 @@ h1 {
 #target-number {
     font-size: 1.5em;
     font-weight: bold;
-    color: #009078; /* Темный бирюзовый цвет для целевого числа */
+    color: #22B24C; /* Темный бирюзовый цвет для целевого числа */
 }
 
 #game-area {
